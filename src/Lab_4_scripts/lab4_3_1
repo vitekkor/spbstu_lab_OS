@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "I'am master"
+bash ./$1
+echo "I repeat, I'am master"

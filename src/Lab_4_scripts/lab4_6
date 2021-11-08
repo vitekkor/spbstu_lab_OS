@@ -1,0 +1,29 @@
+#!/bin/bash
+CUR=$(pwd)
+cd $1
+echo "Dir $1:"
+ls
+cd $CUR
+cd $2
+echo "Before $2:"
+ls
+cd $CUR
+echo "Start"
+for file in "$1/*";
+do
+cp -f $file $2
+done
+cd $2
+for file in *;
+do
+cd $CUR
+cd $1
+[ -e $file ] && echo $file || (cd $CUR && cd $2 && rm $file) 
+cd $CUR
+cd $2
+done
+cd $CUR
+cd $2
+echo "After $2:"
+ls
+cd $CUR
