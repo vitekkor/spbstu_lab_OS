@@ -10,5 +10,5 @@ RES=$(diff $1/dir_files $2/dir_files)
 if [[ "$RES" == "" ]]; then
 echo "No differences";
 else
-echo $RES
+echo "$RES"
 fi
