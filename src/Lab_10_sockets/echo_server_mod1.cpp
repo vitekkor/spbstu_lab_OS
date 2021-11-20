@@ -53,14 +53,12 @@ int main(void)
 		done = 0;
 		do {
 			n = recv(s2, str, 100, 0);
-			printf("CLIENT ----> %s", str);
-			if (n <= 0) { 
+			if (n <= 0) {
 				if (n < 0) perror("recv");
 				done = 1;
 			}
-
-			if (!done) 
-			printf("SERVER ----> %s", str);
+            printf("Client said: %s", str);
+			if (!done)
 				if (send(s2, str, n, 0) < 0) {
 					perror("send");
 					done = 1;
