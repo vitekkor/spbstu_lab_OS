@@ -1,0 +1,20 @@
+File dir1 - 
+File dir2 - 
+File lab4 -  1:#!/bin/bash
+File lab4_2 -  1:#!/bin/bash
+File lab4_3_1 -  1:#!/bin/bash
+File lab4_3_2 -  1:#!/bin/bash
+File lab4_4 -  1:#!/bin/bash
+File lab4_5 -  1:#!/bin/bash
+File lab4_6 -  1:#!/bin/bash
+File dir1 - 
+File dir2 - 
+File echo - 
+File lab4 -  5:echo "var1 = $var1" 6:echo "var2 = $var2" 7:echo "var3 = $var3" 9:echo "var4 = $var4" 10:echo "Replace var4 with empty string: ${var4//value2}" 11:echo "Replace var4 with NEW_VALUE string: ${var4//value2/NEW_VALUE}"
+File lab4_2 -  4:echo "$a+$b="$(($a+$b)) 5:echo "$a-$b="$(($a-$b)) 6:echo "$a*$b="$(($a*$b)) 7:echo "$a/$b="$(($a/$b))
+File lab4_3_1 -  2:echo "I'am master" 4:echo "I repeat, I'am master"
+File lab4_3_2 -  2:echo "I'am slave" 3:echo "Press any key to continue..."
+File lab4_4 -  11:echo "No differences"; 13:echo "$RES"
+File lab4_5 -  4:echo "File" $file "- " $(grep "$1" $file -n) >> $2
+File lab4_6 -  4:echo "Dir $1:" 8:echo "Before $2:" 11:echo "Start" 21:[ -e $file ] && echo $file || (cd $CUR && cd $2 && rm $file) 27:echo "After $2:"
+File result -  12:File echo - 13:File lab4 - 5:echo "var1 = $var1" 6:echo "var2 = $var2" 7:echo "var3 = $var3" 9:echo "var4 = $var4" 10:echo "Replace var4 with empty string: ${var4//value2}" 11:echo "Replace var4 with NEW_VALUE string: ${var4//value2/NEW_VALUE}" 14:File lab4_2 - 4:echo "$a+$b="$(($a+$b)) 5:echo "$a-$b="$(($a-$b)) 6:echo "$a*$b="$(($a*$b)) 7:echo "$a/$b="$(($a/$b)) 15:File lab4_3_1 - 2:echo "I'am master" 4:echo "I repeat, I'am master" 16:File lab4_3_2 - 2:echo "I'am slave" 3:echo "Press any key to continue..." 17:File lab4_4 - 11:echo "No differences"; 13:echo "$RES" 18:File lab4_5 - 4:echo "File" $file "- " $(grep "$1" $file -n) >> $2 19:File lab4_6 - 4:echo "Dir $1:" 8:echo "Before $2:" 11:echo "Start" 21:[ -e $file ] && echo $file || (cd $CUR && cd $2 && rm $file) 27:echo "After $2:"

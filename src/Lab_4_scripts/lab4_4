@@ -1,0 +1,14 @@
+#!/bin/bash
+CUR_DIR=$(pwd)
+cd $1
+ls -l | awk '{$2=$3=$4=$6=$7=$8=""; print $0}' > dir_files
+cd $CUR_DIR
+cd $2
+ls -l | awk '{$2=$3=$4=$6=$7=$8=""; print $0}' > dir_files
+cd $CUR_DIR
+RES=$(diff $1/dir_files $2/dir_files)
+if [[ "$RES" == "" ]]; then
+echo "No differences";
+else
+echo "$RES"
+fi

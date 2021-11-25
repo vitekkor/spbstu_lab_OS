@@ -1,0 +1,5 @@
+#!/bin/bash
+for file in *;
+do
+echo "File" $file "- " $(grep "$1" $file -n) >> $2
+done 

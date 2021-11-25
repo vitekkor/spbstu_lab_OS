@@ -1,0 +1,8 @@
+#!/bin/bash
+export a=20
+export b=10
+echo "$a+$b="$(($a+$b))
+echo "$a-$b="$(($a-$b))
+echo "$a*$b="$(($a*$b))
+echo "$a/$b="$(($a/$b))
+

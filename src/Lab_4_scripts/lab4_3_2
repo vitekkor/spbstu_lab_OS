@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "I'am slave"
+echo "Press any key to continue..."
+read -sn 1 
